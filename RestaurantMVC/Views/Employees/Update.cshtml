@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Employee Update";
+}
+<form action="/Employees/Save" method="post">
+    @{ if (ViewBag.message != null)
+        {
+            <div class="alert alert-danger">@ViewBag.message</div>
+        }
+    }
+    <div class="mb-3">
+        <label class="form-label">FirstName</label>
+        <input type="text" name="Name" class="form-control" value="@ViewBag.employee.Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">LastName</label>
+        <input type="text" name="SurName" class="form-control" value="@ViewBag.employee.SurName">
+    </div>
+    <input type="hidden" name="Id" value="@ViewBag.employee.Id">
+    <button type="submit" class="btn btn-success  col-md-3">Update</button>
+</form>
