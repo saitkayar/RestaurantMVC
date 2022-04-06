@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Product Page";
+}
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var product in ViewBag.products)
+        {
+
+
+        <tr>
+            <th scope="row">@product.Id</th>
+            <td>@product.CategoryName</td>
+            <td>@product.ProductName</td>
+            <td>
+                <a class="btn btn-link" href="/Products/Update/@product.Id">Edit</a>
+                <a class="btn btn-link" href="/Products/DeleteById/@product.Id">Delete</a>
+            </td>
+
+        </tr>
+      
+        }
+    </tbody>
+</table>
+<a class="btn btn-sm btn-primary text-light" asp-controller="Products" asp-action="Add">+</a>

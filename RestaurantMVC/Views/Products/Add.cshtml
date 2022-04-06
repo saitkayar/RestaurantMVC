@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Product Add";
+}
+
+<form action="/Products/Save" method="post">
+    @{ if (ViewBag.message != null)
+        {
+            <div class="alert alert-danger">@ViewBag.message</div>
+        }
+    }
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="CategoryId" class="form-control">
+            @foreach (Category category in ViewBag.categories)
+            {
+                <option value="@category.Id">@category.CategoryName</option>
+            }
+        </select>
+    </div>
+   
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="ProductName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="number" name="ProductPrice" class="form-control">
+    </div>
+   
+    <button type="submit" class="btn btn-success  col-md-3">Add</button>
+</form>

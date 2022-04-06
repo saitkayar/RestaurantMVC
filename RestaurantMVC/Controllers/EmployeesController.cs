@@ -12,10 +12,12 @@ namespace RestaurantMVC.Controllers
     public class EmployeesController : Controller
     {
         private IEmployeeRepository _employeeRepository;
+      
 
         public EmployeesController()
         {
             _employeeRepository = new EmployeeRepository();
+            
         }
 
         public IActionResult Index()
@@ -31,7 +33,7 @@ namespace RestaurantMVC.Controllers
 
 
         }
-
+        [HttpPost]
         public IActionResult Save(Employee employee)
         {
             string route = (employee.Id == 0) ? "Add" : "Update";
