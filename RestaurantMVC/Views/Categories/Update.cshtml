@@ -1,5 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Categories Update";
 }
+
+<form action="/Categories/Save" method="post">
+
+
+    <div class="mb-3">
+        <label class="form-label">Category Name</label>
+        <input type="text" name="Name" class="form-control" value="@ViewBag.category.CategoryName">
+    </div>
+    <input type="hidden" name="Id" value="@ViewBag.category.Id">
+    <button type="submit" class="btn btn-success  col-md-3">Update</button>
+</form>     

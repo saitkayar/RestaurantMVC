@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Order Page";
+}
+
+<a class="btn btn-sm btn-primary text-light" asp-controller="Orders" asp-action="Add">+</a>
+
+<table  class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Product Name</th>
+            <th>Quantity</th>
+            @*<th>Employee</th>*@
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in ViewBag.orders)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.ProductName</td>
+                <td>@order.Quantity</td>
+                @*<td>@order.EmployeeId</td>*@
+                <td>
+                    <a class="btn btn-link" href="/Orders/Update/@order.Id">Edit</a>
+                    <a class="btn btn-link" href="/Orders/DeleteById/@order.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

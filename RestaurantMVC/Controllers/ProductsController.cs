@@ -46,7 +46,7 @@ namespace RestaurantMVC.Controllers
             this._productRepository.Delete(id);
             return RedirectToAction("index");
         }
-      
+        [HttpPost]
         public IActionResult Save(Product product)
         {
             string route = (product.Id == 0) ? "Add" : "Update";

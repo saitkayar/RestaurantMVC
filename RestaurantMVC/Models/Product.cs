@@ -9,5 +9,6 @@ namespace RestaurantMVC.Models
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
 
+
     }
 }

@@ -38,13 +38,13 @@ namespace RestaurantMVC.Controllers
             return View();
            
         }
-
+        [HttpPost]
         public IActionResult Save(Category category)
         {
           string route=  (category.Id == 0) ? "Add" : "Update";
             if (category.CategoryName == null)
             {
-                return BadRequest( "Please enter Name");
+                return RedirectToAction( route,"Please enter Name");
             }
             if (category.Id == 0)
             {
@@ -54,7 +54,7 @@ namespace RestaurantMVC.Controllers
             {
                 this._categoryRepository.Update(category);
             }
-            return Ok(category);
+            return RedirectToAction("Index");
         }
 
         public IActionResult DeleteById(int id)
