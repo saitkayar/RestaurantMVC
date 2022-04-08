@@ -11,12 +11,12 @@ namespace RestaurantMVC.Controllers
     public class BillsController : Controller
     {
         private IBillRepository _billRepository;
-        private IProductRepository _productRepository;
+        //private IProductRepository _productRepository;
 
         public BillsController()
         {
             _billRepository = new BillRepository();
-            _productRepository = new ProductRepository();
+            
         }
 
         public IActionResult Index()

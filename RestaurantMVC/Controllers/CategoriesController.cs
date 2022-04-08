@@ -27,6 +27,7 @@ namespace RestaurantMVC.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult Update(int id)
         {
             var category = _categoryRepository.GetById(id);
@@ -41,11 +42,11 @@ namespace RestaurantMVC.Controllers
         [HttpPost]
         public IActionResult Save(Category category)
         {
-          string route=  (category.Id == 0) ? "Add" : "Update";
-            if (category.CategoryName == null)
-            {
-                return RedirectToAction( route,"Please enter Name");
-            }
+          //string route=  (category.Id == 0) ? "Add" : "Update";
+            //if (category.CategoryName == null)
+            //{
+            //    return RedirectToAction( route,"Please enter Name");
+            //}
             if (category.Id == 0)
             {
                 this._categoryRepository.Add(category);

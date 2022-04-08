@@ -5,7 +5,7 @@ namespace RestaurantMVC.Models
     public class Table : IModel
     {
         public int Id { get; set; }
-        public int SectionId { get; set; }
+        public virtual Section Section { get; set; }
         public bool IsFull { get; set; }
     }
 }

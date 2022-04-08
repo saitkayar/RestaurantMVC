@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Table Id</th>
+        <th>Section</th>
+        <th>IsFull</th>
+    </tr>
+    @foreach (var item in ViewBag.tables)
+    {
+<tr>
+    <td>
+        @item.Id
+    </td>
+    <td>
+     section
+    </td>
+
+    <td>Dolu</td>
+
+</tr>
+    }
+
+</table>
+

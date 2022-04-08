@@ -1,0 +1,30 @@
+﻿@{ 
+    ViewData["Title"] = "Section Page";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Section Name</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead><tbody>
+    @foreach (var item in ViewBag.sections)
+    {
+
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.SectionName</td>
+            <td>
+                <a class="btn btn-danger"  href="/Sections/DeleteById/@item.Id">Delete</a>
+                <a class="btn btn-success" href="/Sections/Update/@item.Id">Edit</a>
+            </td>
+         
+
+        </tr>
+    }
+</tbody>
+</table>
+<a href="/Sections/Add" class="btn btn-primary">New Sections</a>

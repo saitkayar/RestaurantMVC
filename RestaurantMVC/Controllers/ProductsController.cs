@@ -27,7 +27,7 @@ namespace RestaurantMVC.Controllers
         }
         public IActionResult Add()
         {
-            ViewBag.categories = this._categoryRepository.Getall();
+            //ViewBag.categories = this._categoryRepository.Getall();
             return View();
         }
         public IActionResult Update(int id)
@@ -56,10 +56,10 @@ namespace RestaurantMVC.Controllers
             {
                 return RedirectToAction(route ,"Please enter Name");
             }
-            if (product.CategoryId == 0)
-            {
-                return RedirectToAction(route,"Please select CategoryId");
-            }
+            //if (product.Category.CategoryName == null)
+            //{
+            //    return RedirectToAction(route,"Please select CategoryId");
+            //}
             if (product.ProductPrice == 0)
             {
                 return RedirectToAction(route,  "Please enter Price");

@@ -10,7 +10,8 @@ namespace RestaurantMVC.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=127.0.0.1;Database=RestaurantDb;Trusted_Connection=true;");
+            //optionsBuilder.UseSqlServer(@"Server=127.0.0.1;Database=RestaurantDb;Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-3TDJHFS\MSSQLSERVER123;Database=RestaurantDb;Trusted_Connection=true;");
         }
 
         public DbSet<Product> Products { get; set; }

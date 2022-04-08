@@ -24,7 +24,7 @@ namespace RestaurantMVC.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.orders = _orderRepository.GetByProduct();
+            //ViewBag.orders = _orderRepository.GetByProduct();
             return View();
         }
         public IActionResult Add()

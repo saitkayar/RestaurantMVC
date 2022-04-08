@@ -65,7 +65,7 @@ namespace RestaurantMVC.Controllers
             var employee = this._employeeRepository.GetById(id);
             if (employee==null)
             {
-                return RedirectToAction("index");
+                return RedirectToAction("Index");
 
             }
             ViewBag.employee = employee;
