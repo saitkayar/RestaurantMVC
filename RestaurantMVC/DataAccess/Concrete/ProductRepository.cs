@@ -22,10 +22,11 @@ namespace RestaurantMVC.DataAccess.Concrete
             using (var context = new RestaurantDbContext())
             {
                 var result = from p in context.Products
-                             join c in context.Categories on p.Category.Id equals c.Id
+                             join c in context.Categories on p.CategoryId equals c.Id
                              select new ProductDto()
                              {
                                  Id = p.Id,
+                                 CategoryId=c.Id,
                                  CategoryName = c.CategoryName,
                                  ProductName = p.ProductName,
                                  ProductPrice=p.ProductPrice

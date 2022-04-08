@@ -10,26 +10,29 @@ namespace RestaurantMVC.DataAccess.Concrete
 {
     public class OrderRepository : BaseRepository<Order, RestaurantDbContext>, IOrderRepository
     {
-        //public List<OrderDto> GetByProduct()
-        //{
-        //    using (var context=new RestaurantDbContext())
-        //    {
-        //        var result = from p in context.Products
-        //                     join o in context.Orders on p.Id equals o.ProductId
-        //                     join e in context.Employees on o.EmployeeId equals e.Id
-        //                     select new OrderDto()
-        //                     {
-        //                         Id = o.Id,
-        //                         ProductName = p.ProductName,
-        //                         Quantity = o.Quantity,
-        //                         //EmployeeId = e.Id
-        //                     };
-        //        return result.ToList();
+        public List<OrderDto> GetByProduct()
+        {
+            using (var context = new RestaurantDbContext())
+            {
+                var result = from p in context.Products
+                             join o in context.Orders on p.Id equals o.ProductId
+                             join t in context.Tables on o.TableId equals t.Id
+                  
+                             select new OrderDto()
+                             {
+                                 Id = o.Id,
+                                 ProductName = p.ProductName,
+                                 Quantity = o.Quantity,
+                              ProductPrice=p.ProductPrice,
+                              TableId=t.Id
+                             };
+                return result.ToList();
 
 
-        //    }}
-    
-}
+            }
+        }
+
+    }
 
 }
 

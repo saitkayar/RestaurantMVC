@@ -1,1 +1,27 @@
 ﻿
+
+<form action="/Products/Save" method="post">
+   
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="CategoryId" class="form-control">
+            @foreach (Category item in ViewBag.categories)
+            {
+                <option value="@item.Id" >@item.CategoryName.</option>
+            }
+
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">ProductName</label>
+        <input type="text" name="ProductName" class="form-control" value="@ViewBag.product.ProductName">
+    </div>
+ 
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="number" name="ProductPrice" class="form-control" value="@ViewBag.product.ProductPrice">
+    </div>
+
+    <input type="hidden" name="Id" value="@ViewBag.product.Id" />
+    <button type="submit" class="btn btn-warning  col-md-3">Update</button>
+</form>

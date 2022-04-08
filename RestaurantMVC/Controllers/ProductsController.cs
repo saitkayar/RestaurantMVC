@@ -22,17 +22,18 @@ namespace RestaurantMVC.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.products = this._productRepository.GetAllWithCategory();
+            ViewBag.products = _productRepository.GetAllWithCategory();
             return View();
         }
         public IActionResult Add()
         {
-            //ViewBag.categories = this._categoryRepository.Getall();
+            ViewBag.categories = this._categoryRepository.Getall();
             return View();
         }
         public IActionResult Update(int id)
         {
-            var product = this._categoryRepository.GetById(id);
+            ViewBag.categories = _categoryRepository.Getall();
+            var product = _productRepository.GetById(id);
             if (product == null)
             {
                 RedirectToAction("Index");
@@ -46,6 +47,7 @@ namespace RestaurantMVC.Controllers
             this._productRepository.Delete(id);
             return RedirectToAction("index");
         }
+
         [HttpPost]
         public IActionResult Save(Product product)
         {

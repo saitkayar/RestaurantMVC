@@ -1,4 +1,5 @@
-﻿
+﻿@using RestaurantMVC.Models
+@model  List<Table>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,16 +11,11 @@
         <th>Section</th>
         <th>IsFull</th>
     </tr>
-    @foreach (var item in ViewBag.tables)
+    @foreach (var table in Model)
     {
 <tr>
-    <td>
-        @item.Id
-    </td>
-    <td>
-     section
-    </td>
-
+    <td>@table.Id</td>
+    <td>@table.Section</td>
     <td>Dolu</td>
 
 </tr>

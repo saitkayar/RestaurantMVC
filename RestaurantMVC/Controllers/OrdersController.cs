@@ -13,23 +13,25 @@ namespace RestaurantMVC.Controllers
     {
         private IOrderRepository _orderRepository;
         private IProductRepository _productRepository;
-        private IEmployeeRepository _employeeRepository;
+        private ITableRepository _tableRepository;
+
 
         public OrdersController()
         {
             _orderRepository =new OrderRepository();
             _productRepository = new ProductRepository();
-            _employeeRepository = new EmployeeRepository();
+            _tableRepository = new TableRepository();
         }
 
         public IActionResult Index()
         {
-            //ViewBag.orders = _orderRepository.GetByProduct();
+     
+            ViewBag.orders =_orderRepository.GetByProduct();
             return View();
         }
         public IActionResult Add()
         {
-            ViewBag.products = this._productRepository.Getall();
+            ViewBag.products = _productRepository.Getall();
             return View();
         }
         public IActionResult Update(int id)
@@ -51,7 +53,7 @@ namespace RestaurantMVC.Controllers
         [HttpPost]
         public IActionResult Save(Order order)
         {
-            string route = (order.Id == 0) ? "Add" : "Update";
+            //string route = (order.Id == 0) ? "Add" : "Update";
             //if (order. == null)
             //{
             //    return RedirectToAction(route, "Please enter Name");

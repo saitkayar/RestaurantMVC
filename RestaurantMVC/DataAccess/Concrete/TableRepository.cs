@@ -10,5 +10,6 @@ namespace RestaurantMVC.DataAccess.Concrete
 {
     public class TableRepository:BaseRepository<Table,RestaurantDbContext>, ITableRepository
     {
+        
     }
 }

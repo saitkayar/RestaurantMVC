@@ -9,6 +9,6 @@ namespace RestaurantMVC.DataAccess.Abstract
 {
    public interface IOrderRepository:IBaseRepository<Order>
     {
-        //public List<OrderDto> GetByProduct();
+        public List<OrderDto> GetByProduct();
     }
 }

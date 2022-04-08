@@ -10,11 +10,11 @@ namespace RestaurantMVC.Models
      
         public int Id { get; set; }
 
-        public ICollection<Product> Products { get; set; }
-
-        //public int TableId { get; set; }
+        //public ICollection<Product> Products { get; set; }
+        public int ProductId { get; set; }
+        public int TableId { get; set; }
         public int Quantity { get; set; }
-        public virtual Employee Employee { get; set; }
+        //public virtual Employee Employee { get; set; }
 
     }
 }
