@@ -1,14 +1,14 @@
 ﻿
 @{
     ViewData["Title"] = "Add";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
+<div class="container">
+    <form action="/Bills/Save" method="post">
 
-<form action="/Bills/Save" method="post">
-
-    <div class="mb-3">
+        <div class="mb-3">
             <label class="form-label"> Product Name  </label>
-            <select name="ProductId" class="form-control" >
+            <select name="ProductId" class="form-control">
                 @foreach (Product product in ViewBag.products)
                 {
                     <option value="@product.Id">@product.ProductName</option>
@@ -17,9 +17,9 @@
             </select>
 
         </div>
-    <div class="mb-3">
+        <div class="mb-3">
             <label class="form-label"> Product Price  </label>
-            <select name="ProductId" class="form-control" >
+            <select name="ProductId" class="form-control">
                 @foreach (Product product in ViewBag.products)
                 {
                     <option value="@product.Id">@product.ProductPrice</option>
@@ -28,9 +28,9 @@
             </select>
 
         </div>
-    <div class="mb-3">
+        <div class="mb-3">
             <label class="form-label"> Product Quantity  </label>
-            <select name="OrderId" class="form-control" >
+            <select name="OrderId" class="form-control">
                 @foreach (Order order in ViewBag.orders)
                 {
                     <option value="@order.Id">@order.Quantity</option>
@@ -40,13 +40,14 @@
 
         </div>
 
- 
-    <div class="mb-3">
-        <label class="form-label"> Discount </label>
-        <input type="number" name="Discount" class="form-control" />
+
+        <div class="mb-3">
+            <label class="form-label"> Discount </label>
+            <input type="number" name="Discount" class="form-control" />
+
+        </div>
+
+        <button class="btn btn-success" type="submit">Add</button>
+    </form>
 
     </div>
-
-    <button class="btn btn-success" type="submit">Add</button>
-</form>
-

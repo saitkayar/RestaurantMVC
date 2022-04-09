@@ -44,7 +44,7 @@ namespace RestaurantMVC.Controllers
             {
                 RedirectToAction("Index");
             }
-            ViewBag.product = order;
+            ViewBag.order = order;
             return View();
 
         }

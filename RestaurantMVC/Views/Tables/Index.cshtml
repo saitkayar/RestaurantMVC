@@ -1,28 +1,32 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
-<a class="btn btn-sm btn-primary text-light" href="/Tables/Add"   >+</a>
-<table class="table table-bordered">
-    <tr>
-        <th>Id</th>
-        <th>Section</th>
-        <th>IsFull</th>
-        <th>Actions</th>
-    </tr>
-    @foreach (TableDto table in ViewBag.tables)
-    {
-<tr>
-    <td>@table.TableId</td>
-    <td>@table.SectionName</td>
-    <td>Dolu</td>
-    <td>
-        <a href="/Tables/DeleteById/@table.TableId" class="btn btn-danger">Delete</a>
-    <a href="/Tables/Update/@table.TableId" class="btn btn-success">Update</a></td>
+<div class="container">
 
-</tr>
-    }
+    <table class="table table-bordered mt-3">
+        <tr>
+            <th>Table No</th>
+            <th>Section</th>
+            <th>IsFull</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (TableDto table in ViewBag.tables)
+        {
+            <tr>
+                <td>@table.TableId</td>
+                <td>@table.SectionName</td>
+                <td>Dolu</td>
+                <td>
+                    <a href="/Tables/DeleteById/@table.TableId" class="btn btn-danger">Delete</a>
+                    <a href="/Tables/Update/@table.TableId" class="btn btn-success">Update</a>
+                </td>
 
-</table>
+            </tr>
+        }
 
+    </table>
+    <a class="btn btn-sm btn-primary text-light" href="/Tables/Add">Add New Table</a>
+
+</div>

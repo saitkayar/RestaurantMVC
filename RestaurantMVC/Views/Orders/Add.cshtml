@@ -2,36 +2,37 @@
     ViewData["Title"] = "Order Add";
 }
 
+<div class="container">
+    <form action="/Orders/Save" method="post">
 
-<form action="/Orders/Save" method="post">
 
 
+        <div class="mb-3">
+            <label class="form-label">Product Name</label>
+            <select name="ProductId" class="form-control">
+                @foreach (Product product in ViewBag.products)
+                {
+                    <option value="@product.Id">@product.ProductName</option>
+                }
 
-    <div class="mb-3">
-        <label class="form-label">Product Name</label>
-        <select name="ProductId" class="form-control">
-            @foreach (Product product in ViewBag.products)
-            {
-                <option value="@product.Id">@product.ProductName</option>
-            }
+            </select>
 
-        </select>
-      
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input type="number" name="Quantity" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">TableId</label>
+            <select name="TableId" class="form-control">
+                @foreach (Table table in ViewBag.tables)
+                {
+                    <option value="@table.Id">@table.Id</option>
+                }
+
+            </select>
+
+        </div>
+        <button type="submit" class="btn btn-success  col-md-3">Add</button>
+    </form>
     </div>
-    <div class="mb-3">
-        <label class="form-label">Quantity</label>
-        <input type="number" name="Quantity" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">TableId</label>
-        <select name="TableId" class="form-control">
-            @foreach (Table table in ViewBag.tables)
-            {
-                <option value="@table.Id">@table.Id</option>
-            }
-
-        </select>
-       
-    </div>
-    <button type="submit" class="btn btn-success  col-md-3">Add</button>
-</form>

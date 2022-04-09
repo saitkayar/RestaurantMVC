@@ -1,12 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Category Add";
 }
+<div class="container">
+    <form action="/Categories/Save" method="post">
 
-<form action="/Categories/Save" method="post">
-   
-    <div class="mb-3">
-        <label class="form-label">Category Name</label>
-        <input type="text" name="CategoryName" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-success  col-md-3">Add</button>
-</form>
+        <div class="mb-3">
+            <label class="form-label">Category Name</label>
+            <input type="text" name="CategoryName" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success  col-md-3">Add</button>
+    </form>
+</div>

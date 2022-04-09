@@ -1,45 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Bill Page";
 }
+<div class="container">
 
-<a class="btn btn-sm btn-primary text-light" asp-controller="Bills" asp-action="Add">+</a>
-<table class="table table-dark">
-    <thead>
-        <tr>
-   
-            <th scope="col">#</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product Price</th>
-            <th scope="col">Product Quantity</th>
-            <th scope="col">SubTotal</th>
-            <th scope="col">Discount</th>
-            <th scope="col">Total</th>
-            <th scope="col">Date</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (CalculateDto bill in ViewBag.bills)
-        {
-
-
+    <table class="table table-dark mt-3">
+        <thead>
             <tr>
-                <th scope="row">@bill.BillId</th>
-                <td>@bill.ProductName</td>
-                <td>@bill.ProductPrice</td>
-                <td>@bill.Quantity</td>
-                <td>@bill.SubTotal</td>
-                <td>@bill.Discount</td>
-                <td>@bill.Total</td>
-                <td>@bill.Date</td>
-                <td>
-                    <a class="btn btn-link" href="/Bills/Update/@bill.BillId">Edit</a>
-                    <a class="btn btn-link" href="/Bills/Delete/@bill.BillId">Delete</a>
-                </td>
 
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Product Quantity</th>
+                <th scope="col">SubTotal</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
             </tr>
+        </thead>
 
-        }
-    </tbody>
-</table>
+        <tbody>
+            @foreach (CalculateDto bill in ViewBag.bills)
+            {
+
+
+                <tr>
+                    <th scope="row">@bill.BillId</th>
+                    <td>@bill.ProductName</td>
+                    <td>@bill.ProductPrice</td>
+                    <td>@bill.Quantity</td>
+                    <td>@bill.SubTotal</td>
+                    <td>@bill.Discount</td>
+                    <td>@bill.Total</td>
+                    <td>@bill.Date</td>
+                    <td>
+                        <a class="btn btn-link" href="/Bills/Update/@bill.BillId">Edit</a>
+                        <a class="btn btn-link" href="/Bills/Delete/@bill.BillId">Delete</a>
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-sm btn-primary text-light" asp-controller="Bills" asp-action="Add">New Bill</a>
+    </div>

@@ -2,38 +2,39 @@
     ViewData["Title"] = "Order Page";
 }
 
-<a class="btn btn-sm btn-primary text-light" asp-controller="Orders" asp-action="Add">+</a>
 
-<table  class="table table-striped">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th> Product Name</th>
-            <th>Quantity</th>
-         
-            <th>Table Number</th>
-
-
-            @*<th>Employee</th>*@
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (OrderDto order in ViewBag.orders)
-        {
+<div class="container">
+    <table class="table table-dark mt-3">
+        <thead>
             <tr>
-                <td>@order.Id</td>
-                <td>@order.ProductName</td>
-                
-       
-                <td>@order.Quantity</td>
-                <td>@order.TableId</td>
-                <td>
-                    <a class="btn btn-link" href="/Orders/Update/@order.Id">Edit</a>
-                    <a class="btn btn-link" href="/Orders/DeleteById/@order.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                <th>Id</th>
+                <th> Product Name</th>
+                <th>Quantity</th>
 
+                <th>Table Number</th>
+
+
+                @*<th>Employee</th>*@
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (OrderDto order in ViewBag.orders)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.ProductName</td>
+
+
+                    <td>@order.Quantity</td>
+                    <td>@order.TableId</td>
+                    <td>
+                        <a class="btn btn-link" href="/Orders/Update/@order.Id">Edit</a>
+                        <a class="btn btn-link" href="/Orders/DeleteById/@order.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-sm btn-primary text-light" asp-controller="Orders" asp-action="Add">New Order</a>
+    </div>

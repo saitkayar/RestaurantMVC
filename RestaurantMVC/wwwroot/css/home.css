@@ -1,0 +1,13 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Poppins:wght@400;500;700&display=swap');
+
+.home {
+    color: white;
+    height: 100vh;
+  
+    background-image: url("../bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Beau Rivage', cursive;
+
+}
