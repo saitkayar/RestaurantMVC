@@ -15,17 +15,21 @@ namespace RestaurantMVC.DataAccess.Concrete
             using (var context=new RestaurantDbContext())
             {
                 var result = from b in context.Bills
-                             join p in context.Products on b.Products.SingleOrDefault().Id  equals p.Id
+                             join p in context.Products on b.ProductId  equals p.Id
+                             join  o in context.Orders on b.OrderId equals o.Id
                           
                              select new CalculateDto()
                              {
-                                 Id = b.Id,
-                              
-                                 SubTotal = p.ProductPrice *b.Order.Quantity,
-                                 Date = DateTime.Today,
-                                 ProductName=p.ProductName,
-                                
-                                
+                                 BillId= b.Id,
+                             
+                                 SubTotal = p.ProductPrice *o.Quantity,
+                                 Discount = b.Discount,
+                                 Total=(p.ProductPrice * o.Quantity)-b.Discount,
+                                 ProductName = p.ProductName,
+                                 Quantity=o.Quantity,
+                                 ProductPrice=p.ProductPrice,
+                                 Date = DateTime.Now,
+                                    Table=o.TableId
                                  
                              };
                 return result.ToList();

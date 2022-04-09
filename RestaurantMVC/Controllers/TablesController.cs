@@ -23,13 +23,13 @@ namespace RestaurantMVC.Controllers
 
         public IActionResult Index()
         {
-         var values=_tableRepository.Getall();
-            return View(values);
+         ViewBag.tables=_tableRepository.GetTableDtos();
+            return View();
         }
 
         public IActionResult Add()
         {
-            //ViewBag.sections = _sectionRepository.Getall();
+            ViewBag.sections = _sectionRepository.Getall();
             return View();
         }
         public IActionResult Save(Table table)
@@ -42,6 +42,23 @@ namespace RestaurantMVC.Controllers
             {
                 _tableRepository.Update(table);
             }
+            return RedirectToAction("Index");
+        }
+        public IActionResult Update(int id)
+        {
+            ViewBag.sections = _sectionRepository.Getall();
+            var table = _tableRepository.GetById(id);
+            if (table==null)
+            {
+                RedirectToAction("Index");
+            }
+            ViewBag.table = table;
+            return View();
+        }
+
+        public IActionResult DeleteById(int id)
+        {
+            _tableRepository.Delete(id);
             return RedirectToAction("Index");
         }
 

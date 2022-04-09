@@ -9,5 +9,8 @@ namespace RestaurantMVC.DataAccess.Abstract
 {
    public interface ITableRepository:IBaseRepository<Table>
     {
+
+        public List<TableDto> GetTableDtos();
+
     }
 }

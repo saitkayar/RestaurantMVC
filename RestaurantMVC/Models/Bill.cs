@@ -10,11 +10,10 @@ namespace RestaurantMVC.Models
     {
         public int Id { get; set; }
         public decimal SubTotal { get; set; }
-        //public decimal Discount { get; set; }
-        //public decimal Total { get; set; }
-        public  ICollection <Product> Products { get; set; }
-
-   public virtual Order Order { get; set; }
+        public decimal Discount { get; set; }
+        public decimal Total { get; set; }
+        public int ProductId { get; set; }
+        public int OrderId { get; set; }
         public DateTime Date { get; set; }
 
 

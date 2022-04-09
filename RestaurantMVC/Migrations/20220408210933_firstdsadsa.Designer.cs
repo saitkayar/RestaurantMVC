@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantMVC.Models;
 
 namespace RestaurantMVC.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    partial class RestaurantDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220408210933_firstdsadsa")]
+    partial class firstdsadsa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,22 +31,15 @@ namespace RestaurantMVC.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Discount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("OrderId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
 
                     b.ToTable("Bills");
                 });
@@ -125,6 +120,9 @@ namespace RestaurantMVC.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("BillId")
+                        .HasColumnType("int");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
@@ -138,6 +136,8 @@ namespace RestaurantMVC.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BillId");
 
                     b.HasIndex("InventoryId");
 
@@ -169,19 +169,48 @@ namespace RestaurantMVC.Migrations
                     b.Property<bool>("IsFull")
                         .HasColumnType("bit");
 
-                    b.Property<int>("SectionId")
+                    b.Property<int?>("SectionId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SectionId");
+
                     b.ToTable("Tables");
+                });
+
+            modelBuilder.Entity("RestaurantMVC.Models.Bill", b =>
+                {
+                    b.HasOne("RestaurantMVC.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("RestaurantMVC.Models.Product", b =>
                 {
+                    b.HasOne("RestaurantMVC.Models.Bill", null)
+                        .WithMany("Products")
+                        .HasForeignKey("BillId");
+
                     b.HasOne("RestaurantMVC.Models.Inventory", null)
                         .WithMany("Products")
                         .HasForeignKey("InventoryId");
+                });
+
+            modelBuilder.Entity("RestaurantMVC.Models.Table", b =>
+                {
+                    b.HasOne("RestaurantMVC.Models.Section", "Section")
+                        .WithMany()
+                        .HasForeignKey("SectionId");
+
+                    b.Navigation("Section");
+                });
+
+            modelBuilder.Entity("RestaurantMVC.Models.Bill", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("RestaurantMVC.Models.Inventory", b =>

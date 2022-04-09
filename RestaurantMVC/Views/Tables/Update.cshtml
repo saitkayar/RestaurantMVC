@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Tables/Save" method="post">
+    <div class="mb-3">
+        <label class="form-control">TableId</label>
+        <input type="number" name="Id" value="@ViewBag.table.Id" />    
+
+    </div>
+    <div class="mb-3">
+        <label class="form-control">Section</label>
+        <select name="SectionId" class="form-control">
+            @foreach (Section item in ViewBag.sections)
+            {
+                <option value="@item.Id">@item.SectionName</option>
+            }
+            
+        </select>
+    </div>
+    <input type="hidden" name="Id" value="@ViewBag.table.Id" />
+    <button type="submit" class="btn btn-info">Update</button>
+</form>
+

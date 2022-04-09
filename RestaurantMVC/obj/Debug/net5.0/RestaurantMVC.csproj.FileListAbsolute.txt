@@ -331,3 +331,7 @@ C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\Restauran
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Sections\Update.cshtml.g.cs
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Tables\Index.cshtml.g.cs
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Tables\Add.cshtml.g.cs
+C:\Users\LENOVO\Desktop\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Tables\Add.cshtml.g.cs
+C:\Users\LENOVO\Desktop\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Orders\Update.cshtml.g.cs
+C:\Users\LENOVO\Desktop\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Tables\Update.cshtml.g.cs
+C:\Users\LENOVO\Desktop\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Bills\Add.cshtml.g.cs

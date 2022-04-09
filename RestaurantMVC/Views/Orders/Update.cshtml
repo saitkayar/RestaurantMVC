@@ -1,14 +1,12 @@
-﻿@{
-    ViewData["Title"] = "Order Add";
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <form action="/Orders/Save" method="post">
-
-
-
-    <div class="mb-3">
-        <label class="form-label">Product Name</label>
+    <div class=" mb-3">
+        <label class="form-label">ProductName</label>
         <select name="ProductId" class="form-control">
             @foreach (Product product in ViewBag.products)
             {
@@ -16,13 +14,14 @@
             }
 
         </select>
-      
+
     </div>
     <div class="mb-3">
-        <label class="form-label">Quantity</label>
-        <input type="number" name="Quantity" class="form-control">
+        <label class="form-control">Quantity</label>
+        <input type="number" name="Quantity" value="@ViewBag.order.Quantity" class="form-control" />
+
     </div>
-    <div class="mb-3">
+    <div class=" mb-3">
         <label class="form-label">TableId</label>
         <select name="TableId" class="form-control">
             @foreach (Table table in ViewBag.tables)
@@ -31,7 +30,10 @@
             }
 
         </select>
-       
+
     </div>
-    <button type="submit" class="btn btn-success  col-md-3">Add</button>
+
+    <input type="hidden" name="Id" value="@ViewBag.order.Id" />
+    <button type="submit" class="btn btn-success">Update</button>
 </form>
+

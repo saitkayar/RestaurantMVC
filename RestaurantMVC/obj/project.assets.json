@@ -7150,19 +7150,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\303SAIT_AKSAM\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\303SAIT_AKSAM\\Desktop\\eeeeeeeeeee\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
       "projectName": "RestaurantMVC",
-      "projectPath": "C:\\Users\\303SAIT_AKSAM\\Desktop\\eeeeeeeeeee\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
-      "packagesPath": "C:\\Users\\303SAIT_AKSAM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\303SAIT_AKSAM\\Desktop\\eeeeeeeeeee\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\303SAIT_AKSAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7231,7 +7231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -11,6 +11,8 @@
             <th scope="col">Product Name</th>
             <th scope="col">Product Price</th>
             <th scope="col">Product Quantity</th>
+            <th scope="col">SubTotal</th>
+            <th scope="col">Discount</th>
             <th scope="col">Total</th>
             <th scope="col">Date</th>
             <th scope="col">Actions</th>
@@ -18,20 +20,22 @@
     </thead>
 
     <tbody>
-        @foreach (var bill in ViewBag.bills)
+        @foreach (CalculateDto bill in ViewBag.bills)
         {
 
 
             <tr>
-                <th scope="row">@bill.Id</th>
+                <th scope="row">@bill.BillId</th>
                 <td>@bill.ProductName</td>
                 <td>@bill.ProductPrice</td>
-                <td>@bill.Order.Quantity</td>
+                <td>@bill.Quantity</td>
+                <td>@bill.SubTotal</td>
+                <td>@bill.Discount</td>
                 <td>@bill.Total</td>
                 <td>@bill.Date</td>
                 <td>
-                    <a class="btn btn-link" href="/Products/Update/@bill.Id">Edit</a>
-                    <a class="btn btn-link" href="/Products/DeleteById/@bill.Id">Delete</a>
+                    <a class="btn btn-link" href="/Bills/Update/@bill.BillId">Edit</a>
+                    <a class="btn btn-link" href="/Bills/Delete/@bill.BillId">Delete</a>
                 </td>
 
             </tr>

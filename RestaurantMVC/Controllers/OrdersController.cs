@@ -32,10 +32,13 @@ namespace RestaurantMVC.Controllers
         public IActionResult Add()
         {
             ViewBag.products = _productRepository.Getall();
+            ViewBag.tables = _tableRepository.Getall();
             return View();
         }
         public IActionResult Update(int id)
         {
+            ViewBag.products = _productRepository.Getall();
+            ViewBag.tables = _tableRepository.Getall();
             var order = this._orderRepository.GetById(id);
             if (order == null)
             {
@@ -48,7 +51,7 @@ namespace RestaurantMVC.Controllers
         public IActionResult DeleteById(int id)
         {
             this._orderRepository.Delete(id);
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
         }
         [HttpPost]
         public IActionResult Save(Order order)

@@ -7,11 +7,11 @@ namespace RestaurantMVC.Models
 {
     public class CalculateDto
     {
-        public int Id { get; set; }
-
+        public int BillId { get; set; }
+        public int Table { get; set; }
         public decimal SubTotal { get; set; }
-        //public decimal Discount { get; set; }
-        //public decimal Total { get; set; }
+        public decimal Discount { get; set; }
+        public decimal Total { get; set; }
         public string ProductName { get; set; }
         public int Quantity { get; set; }
         public decimal ProductPrice { get; set; }
