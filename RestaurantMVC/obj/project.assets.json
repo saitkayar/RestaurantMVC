@@ -7155,11 +7155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Yeni klasör\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
       "projectName": "RestaurantMVC",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Yeni klasör\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Yeni klasör\\RestaurantMVC\\RestaurantMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

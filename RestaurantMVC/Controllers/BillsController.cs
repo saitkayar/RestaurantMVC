@@ -24,12 +24,12 @@ namespace RestaurantMVC.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.bills = _billRepository.Calculate();
+            //ViewBag.bills = _billRepository.Calculate();
             return View();
         }
         public IActionResult Add()
         {
-            ViewBag.bills = _billRepository.Calculate();
+            //ViewBag.bills = _billRepository.Calculate();
             ViewBag.products = _productRepository.Getall();
             ViewBag.orders = _orderRepository.Getall();
             return View();

@@ -10,6 +10,11 @@
                 <th>Id</th>
                 <th> Product Name</th>
                 <th>Quantity</th>
+                <th>ProductPrice</th>
+                <th>Total</th>
+                <th>SubTotal</th>
+                <th>Discount</th>
+                <th>Date</th>
 
                 <th>Table Number</th>
 
@@ -21,18 +26,22 @@
         <tbody>
             @foreach (OrderDto order in ViewBag.orders)
             {
-                <tr>
-                    <td>@order.Id</td>
-                    <td>@order.ProductName</td>
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.ProductName</td>
+                <td>@order.Quantity</td>
+                <th>@order.ProductPrice</th>
+                <th>@order.Total</th>
+                <th>@order.SubTotal</th>
+                <th>@order.Discount</th>
+                <th>@order.Date</th>
 
-
-                    <td>@order.Quantity</td>
-                    <td>@order.TableId</td>
-                    <td>
-                        <a class="btn btn-link" href="/Orders/Update/@order.Id">Edit</a>
-                        <a class="btn btn-link" href="/Orders/DeleteById/@order.Id">Delete</a>
-                    </td>
-                </tr>
+                <td>@order.TableId</td>
+                <td>
+                    <a class="btn btn-link" href="/Orders/Update/@order.Id">Edit</a>
+                    <a class="btn btn-link" href="/Orders/DeleteById/@order.Id">Delete</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

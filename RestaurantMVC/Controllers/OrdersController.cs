@@ -14,6 +14,7 @@ namespace RestaurantMVC.Controllers
         private IOrderRepository _orderRepository;
         private IProductRepository _productRepository;
         private ITableRepository _tableRepository;
+        private IEmployeeRepository _employeeRepository;
 
 
         public OrdersController()
@@ -21,6 +22,7 @@ namespace RestaurantMVC.Controllers
             _orderRepository =new OrderRepository();
             _productRepository = new ProductRepository();
             _tableRepository = new TableRepository();
+            _employeeRepository=new EmployeeRepository();
         }
 
         public IActionResult Index()
@@ -29,10 +31,17 @@ namespace RestaurantMVC.Controllers
             ViewBag.orders =_orderRepository.GetByProduct();
             return View();
         }
+        public IActionResult Kitchen()
+        {
+
+            ViewBag.orders = _orderRepository.GetByProduct();
+            return View();
+        }
         public IActionResult Add()
         {
             ViewBag.products = _productRepository.Getall();
             ViewBag.tables = _tableRepository.Getall();
+            ViewBag.employee = _employeeRepository.Getall();
             return View();
         }
         public IActionResult Update(int id)
@@ -79,5 +88,7 @@ namespace RestaurantMVC.Controllers
             return RedirectToAction("Index");
 
         }
+   
+
     }
 }

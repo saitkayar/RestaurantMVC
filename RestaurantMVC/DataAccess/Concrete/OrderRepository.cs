@@ -17,6 +17,7 @@ namespace RestaurantMVC.DataAccess.Concrete
                 var result = from p in context.Products
                              join o in context.Orders on p.Id equals o.ProductId
                              join t in context.Tables on o.TableId equals t.Id
+                             join e in context.Employees on o.EmployeeId equals e.Id
                   
                              select new OrderDto()
                              {
@@ -24,7 +25,13 @@ namespace RestaurantMVC.DataAccess.Concrete
                                  ProductName = p.ProductName,
                                  Quantity = o.Quantity,
                               ProductPrice=p.ProductPrice,
-                              TableId=t.Id
+                              TableId=t.Id,
+                                 Total = (p.ProductPrice * o.Quantity) - o.Discount,
+                                 SubTotal = p.ProductPrice * o.Quantity,
+                              Discount=o.Discount,
+                                 Date = DateTime.Now,
+                                 FullName=e.Name+" "+e.SurName
+
                              };
                 return result.ToList();
 

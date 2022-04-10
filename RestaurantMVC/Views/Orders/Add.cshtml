@@ -1,4 +1,6 @@
-﻿@{
+﻿@model RestaurantMVC.Models.Product
+
+@{
     ViewData["Title"] = "Order Add";
 }
 
@@ -13,21 +15,44 @@
                 @foreach (Product product in ViewBag.products)
                 {
                     <option value="@product.Id">@product.ProductName</option>
+
                 }
 
             </select>
-
+            @*<div>      @Html.TextBoxFor(x => x.ProductPrice)</div>*@
         </div>
+
         <div class="mb-3">
             <label class="form-label">Quantity</label>
             <input type="number" name="Quantity" class="form-control">
         </div>
+        <div class="mb-3">
+            <label class="form-label"> Discount </label>
+            <input type="text" name="Discount" class="form-control" />
+
+        </div>
+
+        @*<div class="mb-3">
+            <label class="form-label">ProductName</label>
+            <input type="text" name="ProductName" class="form-control">
+        </div>*@
         <div class="mb-3">
             <label class="form-label">TableId</label>
             <select name="TableId" class="form-control">
                 @foreach (Table table in ViewBag.tables)
                 {
                     <option value="@table.Id">@table.Id</option>
+                }
+
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fullname</label>
+            <select name="EmployeeId" class="form-control">
+                @foreach (Employee employee in ViewBag.employee)
+                {
+                    <option value="@employee.Id">@employee.Name @employee.SurName</option>
                 }
 
             </select>

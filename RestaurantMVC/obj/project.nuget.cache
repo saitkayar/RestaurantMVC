@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+cxrmSt5FBsFYv4hn6DbW8lU3+XdnJLMm2Ikb2IvsOEJg9cdrsjNDHaY6lmbM92SzOKqateVCBKcMvdSOXGGZg==",
+  "dgSpecHash": "79WgiT7GIIFfHBCKn7ma5KWFr70T5e7z9vCcP3YAyGiJIajsRCHYI9uboWxvsCq5d8K/NDONqcBgJDRp6ZmE8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\Yeni klasör\\RestaurantMVC\\RestaurantMVC\\RestaurantMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

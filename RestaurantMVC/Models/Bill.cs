@@ -9,9 +9,8 @@ namespace RestaurantMVC.Models
     public class Bill:IModel
     {
         public int Id { get; set; }
-        public decimal SubTotal { get; set; }
-        public decimal Discount { get; set; }
-        public decimal Total { get; set; }
+    
+      
         public int ProductId { get; set; }
         public int OrderId { get; set; }
         public DateTime Date { get; set; }

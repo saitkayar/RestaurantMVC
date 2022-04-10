@@ -12,5 +12,11 @@ namespace RestaurantMVC.Models
         public decimal ProductPrice { get; set; }
         public int TableId { get; set; }
         public int Quantity { get; set; }
+        public decimal SubTotal { get; set; }
+        public decimal Discount { get; set; }
+        public decimal Total { get; set; }
+
+        public string FullName { get; set; }
+        public DateTime Date { get; set; }
     }
 }

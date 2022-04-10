@@ -9,6 +9,6 @@ namespace RestaurantMVC.DataAccess.Abstract
 {
     public interface IBillRepository:IBaseRepository<Bill>
     {
-        public List<CalculateDto> Calculate();
+        //public List<CalculateDto> Calculate();
     }
 }
