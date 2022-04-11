@@ -5,24 +5,34 @@
 }
 <div class="container">
     <form action="/Orders/Save" method="post">
-        <div class=" mb-3">
-            <label class="form-label">ProductName</label>
+        <div class="mb-3">
+            <label class="form-label">Product Name</label>
             <select name="ProductId" class="form-control">
                 @foreach (Product product in ViewBag.products)
                 {
                     <option value="@product.Id">@product.ProductName</option>
+
                 }
 
             </select>
-
+            @*<div>      @Html.TextBoxFor(x => x.ProductPrice)</div>*@
         </div>
+
         <div class="mb-3">
             <label class="form-label">Quantity</label>
-            
-            <input type="number" name="Quantity"  class="form-control" min="0" />
+            <input type="number" name="Quantity" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Discount </label>
+            <input type="text" name="Discount" class="form-control" />
 
         </div>
-        <div class=" mb-3">
+
+        @*<div class="mb-3">
+                <label class="form-label">ProductName</label>
+                <input type="text" name="ProductName" class="form-control">
+            </div>*@
+        <div class="mb-3">
             <label class="form-label">TableId</label>
             <select name="TableId" class="form-control">
                 @foreach (Table table in ViewBag.tables)
@@ -38,4 +48,4 @@
         <button type="submit" class="btn btn-success">Update</button>
     </form>
 
-    </div>
+</div>

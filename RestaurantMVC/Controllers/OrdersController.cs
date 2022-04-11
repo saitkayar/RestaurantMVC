@@ -46,6 +46,7 @@ namespace RestaurantMVC.Controllers
         }
         public IActionResult Update(int id)
         {
+            ViewBag.employee = _employeeRepository.Getall();
             ViewBag.products = _productRepository.Getall();
             ViewBag.tables = _tableRepository.Getall();
             var order = this._orderRepository.GetById(id);

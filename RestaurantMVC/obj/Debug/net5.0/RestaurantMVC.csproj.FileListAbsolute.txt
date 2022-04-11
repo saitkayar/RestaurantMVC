@@ -506,3 +506,4 @@ C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.pdb
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Orders\Kitchen.cshtml.g.cs
+C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Bills\Update.cshtml.g.cs
