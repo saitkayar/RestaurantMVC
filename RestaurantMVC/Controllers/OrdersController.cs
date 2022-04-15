@@ -58,11 +58,11 @@ namespace RestaurantMVC.Controllers
             return View();
 
         }
-        public IActionResult DeleteById(int id)
-        {
-            this._orderRepository.Delete(id);
-            return RedirectToAction("Index");
-        }
+        //public IActionResult DeleteById(int id)
+        //{
+        //    this._orderRepository.Delete(id);
+        //    return RedirectToAction("Index");
+        //}
         [HttpPost]
         public IActionResult Save(Order order)
         {
@@ -87,7 +87,6 @@ namespace RestaurantMVC.Controllers
                 this._orderRepository.Update(order);
             }
             return RedirectToAction("Index");
-
         }
    
 

@@ -49,7 +49,6 @@ C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\Restauran
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.RazorAssemblyInfo.cache
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.RazorAssemblyInfo.cs
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\staticwebassets\RestaurantMVC.StaticWebAssets.Manifest.cache
-C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\staticwebassets\RestaurantMVC.StaticWebAssets.xml
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\scopedcss\bundle\RestaurantMVC.styles.css
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.TagHelpers.input.cache
 C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.TagHelpers.output.cache
@@ -507,3 +506,8 @@ C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\RestaurantMVC.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Orders\Kitchen.cshtml.g.cs
 C:\Users\LENOVO\Desktop\Yeni klasör\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Bills\Update.cshtml.g.cs
+C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Bills\Add.cshtml.g.cs
+C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Bills\Update.cshtml.g.cs
+C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Orders\Kitchen.cshtml.g.cs
+C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Orders\Update.cshtml.g.cs
+C:\Users\303SAIT_AKSAM\Desktop\eeeeeeeeeee\RestaurantMVC\RestaurantMVC\RestaurantMVC\obj\Debug\net5.0\Razor\Views\Tables\Update.cshtml.g.cs

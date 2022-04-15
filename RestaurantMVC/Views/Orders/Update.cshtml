@@ -15,7 +15,19 @@
                 }
 
             </select>
-            @*<div>      @Html.TextBoxFor(x => x.ProductPrice)</div>*@
+
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fullname</label>
+            <select name="EmployeeId" class="form-control">
+                @foreach (Employee employee in ViewBag.employee)
+                {
+                    <option value="@employee.Id">@employee.Name @employee.SurName</option>
+                }
+
+            </select>
+
         </div>
 
         <div class="mb-3">
@@ -24,14 +36,11 @@
         </div>
         <div class="mb-3">
             <label class="form-label"> Discount </label>
-            <input type="text" name="Discount" class="form-control" />
+            <input type="text" name="Discount" class="form-control" value="@ViewBag.order.Discount" />
 
         </div>
 
-        @*<div class="mb-3">
-                <label class="form-label">ProductName</label>
-                <input type="text" name="ProductName" class="form-control">
-            </div>*@
+
         <div class="mb-3">
             <label class="form-label">TableId</label>
             <select name="TableId" class="form-control">
